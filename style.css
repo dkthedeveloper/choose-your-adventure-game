@@ -19,3 +19,28 @@ h2  {
 p   {
     font-family: 'Raleway', sans-serif;
 }
+
+div {
+    text-align: center;
+    
+}
+
+button  {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    padding: 8px 24px;
+    border: 1px solid gray;
+    font-size: 14px;
+    background-color: rgba(14, 14, 14, 0.33);
+    color: rgb(11, 11, 11);
+}
+
+button:hover,  button:focus {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    padding: 8px 24px;
+    border: 1px solid gray;
+    font-size: 14px;
+    background-color: rgb(6, 6, 6);
+    color: rgb(247, 239, 239);
+}
