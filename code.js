@@ -8,7 +8,7 @@
 
 let endingPages = [4, 9, 13, 17, 19, 20];
 let currentPage = 0;
-let content = `<p>`
+let content = `<p>${pages[0].slice(0, -22)}</p>`
 
 
 let isEnding = function (currentPage)  {
@@ -21,66 +21,66 @@ currentPage = prompt(pages[0])
 currentPage = Number(currentPage)
 
 if (currentPage === 1) {
-    content += `${pages[1]}`
+    content += `<p>You turned to page 1.</p><p>${pages[1]}`
     currentPage = Number(prompt(`${pages[1]}\n What page would you like to go to?`))
 }
 
 if (currentPage === 3) {
     currentPage = Number(prompt(`${pages[3]}`));
-    content += `<p>${pages[3]}`
+    content += `<p>You turned to page 3.</p><p>${pages[3]}`
 }
 
 if (currentPage === 2)  {
     currentPage = Number(prompt(`${pages[2]}\n What page would you like to go to?`));
-    content += `<p>${pages[2]}`
+    content += `<p>You turned to page 2.</p><p>${pages[2]}`
 }   
 
 if  (currentPage === 5) {
     currentPage = Number(prompt(`${pages[5]}\n What page would you like to go to?`));
-    content += `<p>${pages[5]}`
+    content += `<p>You turned to page 5.</p><p>${pages[5]}`
 }
 if  (currentPage === 6) {
     currentPage = Number(prompt(`${pages[6]}`));
-    content += `<p>${pages[6]}`
+    content += `<p>You turned to page 6.</p><p>${pages[6]}`
 }
 if  (currentPage === 7) {
     currentPage = Number(prompt(`${pages[7]}\n What page would you like to go to?`));
-    content += `<p>${pages[7]}`
+    content += `<p>You turned to page 7.</p><p>${pages[7]}`
 }
 if  (currentPage === 8) {
     currentPage = Number(prompt(`${pages[8]}\n What page would you like to go to?`));
-    content += `<p>${pages[8]}`
+    content += `<p>You turned to page 8.</p><p>${pages[8]}`
 }
 if  (currentPage === 10) {
     currentPage = Number(prompt(`${pages[10]}`));
-    content += `<p>${pages[10]}`
+    content += `<p>You turned to page 10.</p><p>${pages[10]}`
 } 
 if  (currentPage === 11) {
     currentPage = Number(prompt(`${pages[11]}`));
-    content += `<p>${pages[11]}`
+    content += `<p>You turned to page 11.</p><p>${pages[11]}`
 } 
 if  (currentPage === 12) {
     currentPage = Number(prompt(`${pages[12]}\n What page would you like to go to?`));
-    content += `<p>${pages[12]}`
+    content += `<p>You turned to page 12.</p><p>${pages[12]}`
 } 
 if  (currentPage === 14) {
     currentPage = Number(prompt(`${pages[14]}\n What page would you like to go to?`));
-    content += `<p>${pages[14]}`
+    content += `<p>You turned to page 14.</p><p>${pages[14]}`
 } 
 if  (currentPage === 15) {
     currentPage = Number(prompt(`${pages[15]}`));
-    content += `<p>${pages[15]}`
+    content += `<p>You turned to page 15.</p><p>${pages[15]}`
 } 
 if  (currentPage === 16) {
     currentPage = Number(prompt(`${pages[16]}\n What page would you like to go to?`));
-    content += `<p>${pages[16]}`
+    content += `<p>You turned to page 16.</p><p>${pages[16]}`
 } 
 if  (currentPage === 18) {
     currentPage = Number(prompt(`${pages[18]}`));
-    content += `<p>${pages[18]}`
+    content += `<p>You turned to page 18.</p><p>${pages[18]}`
 } 
 if (isEnding(currentPage))  {
-    content += `<p>${pages[currentPage]}`
+    content += `<p>You turned to page ${currentPage}.</p><p>${pages[currentPage]}`
     currentPage = null
 }   
 else {
