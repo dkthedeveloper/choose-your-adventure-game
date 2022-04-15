@@ -1,1 +1,21 @@
 /* Write your CSS Here. */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Oswald:wght@200;300&family=Raleway:wght@500&display=swap');
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 100px;
+}
+
+h1  {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+
+}
+
+h2  {
+    font-family: 'Fredoka One', cursive;
+}
+
+p   {
+    font-family: 'Raleway', sans-serif;
+}
