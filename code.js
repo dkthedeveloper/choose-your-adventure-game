@@ -7,107 +7,32 @@
 // console.log(pages[0]);
 
 let endingPages = [4, 9, 13, 17, 19, 20];
+let skipToPages = [3, 6, 10, 11, 15, 18];
 let currentPage = 0;
 let content = `<p>${pages[0].slice(0, -22)}</p>`
 
 
-let isEnding = function (currentPage)  {
+let isEnding = function ()  {
     return endingPages.includes(currentPage)
 }
+let isSkipToPage = function ()  {
+    return skipToPages.includes(currentPage)
+}
 
+currentPage = Number(prompt(`${pages[currentPage]}`))
 while (currentPage !== null) {
-currentPage = prompt(pages[0])
 
-currentPage = Number(currentPage)
-
-if (currentPage === 1) {
-    content += `<p>You turned to page 1.</p><p>${pages[1]}`
-    currentPage = Number(prompt(`${pages[1]}\n What page would you like to go to?`))
-}
-
-if (currentPage === 3) {
-    currentPage = Number(prompt(`${pages[3]}`));
-    content += `<p>You turned to page 3.</p><p>${pages[3]}`
-}
-
-if (currentPage === 2)  {
-    currentPage = Number(prompt(`${pages[2]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 2.</p><p>${pages[2]}`
-}   
-
-if  (currentPage === 5) {
-    currentPage = Number(prompt(`${pages[5]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 5.</p><p>${pages[5]}`
-}
-if  (currentPage === 6) {
-    currentPage = Number(prompt(`${pages[6]}`));
-    content += `<p>You turned to page 6.</p><p>${pages[6]}`
-}
-if  (currentPage === 7) {
-    currentPage = Number(prompt(`${pages[7]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 7.</p><p>${pages[7]}`
-}
-if  (currentPage === 8) {
-    currentPage = Number(prompt(`${pages[8]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 8.</p><p>${pages[8]}`
-}
-if  (currentPage === 10) {
-    currentPage = Number(prompt(`${pages[10]}`));
-    content += `<p>You turned to page 10.</p><p>${pages[10]}`
-} 
-if  (currentPage === 11) {
-    currentPage = Number(prompt(`${pages[11]}`));
-    content += `<p>You turned to page 11.</p><p>${pages[11]}`
-} 
-if  (currentPage === 12) {
-    currentPage = Number(prompt(`${pages[12]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 12.</p><p>${pages[12]}`
-} 
-if  (currentPage === 14) {
-    currentPage = Number(prompt(`${pages[14]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 14.</p><p>${pages[14]}`
-} 
-if  (currentPage === 15) {
-    currentPage = Number(prompt(`${pages[15]}`));
-    content += `<p>You turned to page 15.</p><p>${pages[15]}`
-} 
-if  (currentPage === 16) {
-    currentPage = Number(prompt(`${pages[16]}\n What page would you like to go to?`));
-    content += `<p>You turned to page 16.</p><p>${pages[16]}`
-} 
-if  (currentPage === 18) {
-    currentPage = Number(prompt(`${pages[18]}`));
-    content += `<p>You turned to page 18.</p><p>${pages[18]}`
-} 
-if (isEnding(currentPage))  {
-    content += `<p>You turned to page ${currentPage}.</p><p>${pages[currentPage]}`
+if (!isEnding(currentPage)) {
+ content += `<p>You turned to page ${currentPage}.</p><p>${pages[currentPage]}`;
+    if (!isSkipToPage(currentPage)) {
+        currentPage = Number(prompt(`${pages[currentPage]}\n Which page would you like to turn to?`))
+    }   else {
+        currentPage = Number(prompt(`${pages[currentPage]}`))
+    }
+} else {
+    content += `<p>You turned to page ${currentPage}.</p><p>${pages[currentPage]}</p><h2>The End!</h2>`;
     currentPage = null
-}   
-else {
-    currentPage = null
+} 
 }
-if (currentPage === null) {
-    content += `</p>
-    <h2>The End!</h2>`
-}
-}
-
 
 document.write(content)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-// Your Code Here.
