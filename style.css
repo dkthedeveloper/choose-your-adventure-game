@@ -1,9 +1,10 @@
 /* Write your CSS Here. */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Oswald:wght@200;300&family=Raleway:wght@500&display=swap');
 
+
 body{
     background-color: rgb(255, 255, 255);
-    margin: 100px;
+    margin: 30px 200px 80px 200px;
 }
 
 h1  {
@@ -26,6 +27,7 @@ div {
 }
 
 button  {
+    margin-top: 10px;
     text-align: center;
     font-family: 'Fredoka One', cursive;
     padding: 8px 24px;
