@@ -1,5 +1,1 @@
-# Kenzie Academy JavaScript Assignment
-
-Complete your work inside of `code.js`
-
-Follow the instructions provided on my.kenzie.academy for this assignment.
+Using a story provided in the Kenzie Academy curriculum, I built a web app that prompts the user for input (page number), and builds a story based on the choices (page turns) made by the user. Built w/ HTML, CSS, and vanilla JavaScript.
